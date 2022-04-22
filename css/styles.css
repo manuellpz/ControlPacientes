@@ -7,6 +7,7 @@ body {
    background-image: url('../background.svg');
    background-size: cover;
    font-family: consolas;
+   font-weight: bold;
 }
 
 .title {
@@ -14,4 +15,44 @@ body {
    text-align:center;
    padding:25px;
    font-size: 50px;
+}
+
+/*ESTILOS LOGIN*/
+
+#login_container {
+   background:white;
+   width:40vw;
+   height: 30vh;
+   padding:15px;
+   display:flex;
+   flex-flow: column wrap;
+   justify-content: center;
+   align-items: center;
+   margin:auto;
+   border:none;
+   border-radius:8px;
+}
+
+#login_container > form > input {
+   display:block;
+   width:25vw;
+   margin-bottom: 15px;
+   padding:10px;
+   border:1px solid silver;
+   border-radius:5px;
+   text-align: center;
+   font-weight: bold;
+   font-size: 15px;
+}
+
+#btn_ingresar {
+   display:block;
+   margin:auto;
+   padding:8px;
+   width:10vw;
+   border:none;
+   border-radius: 5px;
+   cursor:pointer;
+   color:white;
+   background:forestgreen;
 }

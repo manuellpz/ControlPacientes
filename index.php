@@ -13,7 +13,13 @@
    </header>
    <br>
    <div id="login_container">
-      
+      <form action="./backend/operaciones.php">
+         <label for="txt_user">Usuario: </label>
+         <input type="text" id="txt_user">
+         <label for="txt_password">Contraseña: </label>
+         <input type="password" id="txt_password">
+         <button type="submit" id="btn_ingresar">INGRESAR</button>
+      </form>
    </div>
 
 
