@@ -13,7 +13,7 @@
    </header>
    <br>
    <div id="login_container">
-      <form action="./backend/operaciones.php">
+      <form>
          <label for="txt_user">Usuario: </label>
          <input type="text" id="txt_user">
          <label for="txt_password">Contraseña: </label>
@@ -27,6 +27,6 @@
 
 
 
-   <script src="./js/app.js"></script>
+   <script src="./js/login.js" type="module"></script>
 </body>
 </html>

@@ -33,6 +33,10 @@ body {
    border-radius:8px;
 }
 
+form {
+   accent-color: navy;
+}
+
 #login_container > form > input {
    display:block;
    width:25vw;
