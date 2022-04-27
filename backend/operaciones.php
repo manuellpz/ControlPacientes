@@ -14,8 +14,10 @@ if(isset($_POST['user'])) {
    
    $row = mysqli_fetch_array($result);
    $data[] = Array(
+      "id" => $row['id'],
       "nombres" => $row['nombres'],
-      "apellidos" => $row['apellidos']
+      "apellidos" => $row['apellidos'],
+      "status" => 'OK'
    );
 
    echo json_encode($data);

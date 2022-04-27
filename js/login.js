@@ -15,5 +15,10 @@ addEventListener('submit',e => {
       body: data
    })
    .then(response => response.json())
-   .then(res => console.log(res))
+   .then(res => {
+      if(res[0].status === 'OK'){
+         window.localStorage.setItem('userdata',JSON.stringify(res))
+         window.location.href = './backend/admin.php'
+      }
+   })
 })
