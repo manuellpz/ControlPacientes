@@ -8,7 +8,10 @@
    <title>Administrador</title>
 </head>
 <body>
-   <h1 id="saludo">Hola, Bienvenido</h1>
+   <header>
+      <h1 id="saludo" class="title">Hola, Bienvenido</h1>
+      <button id="logout">Salir</button>
+   </header>
 
 
    <script src="../js/admin.js" type="module"></script>

@@ -1,4 +1,4 @@
-import { select } from "./utils.js"
+import { select,setStyles } from "./utils.js"
 const btnIngresar = document.querySelector('#btn_ingresar')
 
 addEventListener('submit',e => {
@@ -17,8 +17,15 @@ addEventListener('submit',e => {
    .then(response => response.json())
    .then(res => {
       if(res[0].status === 'OK'){
-         window.localStorage.setItem('userdata',JSON.stringify(res))
+         window.sessionStorage.setItem('userdata',JSON.stringify(res))
          window.location.href = './backend/admin.php'
       }
+   })
+   .catch(error => {
+      const element = select('.error')
+      setStyles(element,{display:'block'})
+      setTimeout(()=>{
+         setStyles(element,{display:"none"})
+      },3000)
    })
 })

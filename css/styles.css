@@ -18,6 +18,18 @@ body {
    font-size: 50px;
 }
 
+.error {
+   width:40vw;
+   display: none;
+   margin:auto;
+   text-align: center;
+   background:tomato;
+   color:red;
+   text-shadow: 1px 1px 1px black;
+   padding:10px;
+   border-radius:5px;
+}
+
 /*ESTILOS LOGIN*/
 
 #login_container {
@@ -60,4 +72,15 @@ form {
    cursor:pointer;
    color:white;
    background:forestgreen;
+}
+
+/*ESTILOS ADMIN*/
+
+#logout {
+   width:10vw;
+   padding:10px;
+   font-weight: bold;
+   background:yellow;
+   border-radius: 5px;
+   cursor:pointer;
 }
