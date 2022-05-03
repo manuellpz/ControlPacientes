@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-04-2022 a las 00:35:54
+-- Tiempo de generación: 03-05-2022 a las 02:14:02
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `farmacia`
+-- Base de datos: `consultorio`
 --
 
 -- --------------------------------------------------------
@@ -34,8 +34,18 @@ CREATE TABLE `usuarios` (
   `apellidos` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `universidad` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `cedula` varchar(10) COLLATE latin1_spanish_ci NOT NULL,
-  `especialidad` varchar(255) COLLATE latin1_spanish_ci NOT NULL
+  `especialidad` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
+  `posicion` varchar(255) COLLATE latin1_spanish_ci NOT NULL DEFAULT 'Medico',
+  `usuario` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
+  `contrasena` varchar(255) COLLATE latin1_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombres`, `apellidos`, `universidad`, `cedula`, `especialidad`, `posicion`, `usuario`, `contrasena`) VALUES
+(1, 'Alberto', 'Soto', 'UAG - Universidad Autonoma de Guadalajara', '15934635', 'Medico Cirujano', 'Admin', 'albertst', 'albert2022');
 
 --
 -- Índices para tablas volcadas
@@ -55,7 +65,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
