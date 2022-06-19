@@ -8,7 +8,7 @@ if(data.length > 0)
 else
    window.location.href = '../'
 
-select('#logout').addEventListener('click',() => {
+select('#btn_logout').addEventListener('click',() => {
    sessionStorage.removeItem('userdata')
    window.location.href = '../'
 })

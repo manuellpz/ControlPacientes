@@ -30,18 +30,16 @@ body {
    border-radius:5px;
 }
 
-/*ESTILOS LOGIN*/
-
-#login_container {
+.form_container {
    background:white;
    width:40vw;
-   height: 30vh;
+   height: auto;
    padding:15px;
    display:flex;
    flex-flow: column wrap;
    justify-content: center;
    align-items: center;
-   margin:auto;
+   margin:2% auto;
    border:none;
    border-radius:8px;
 }
@@ -50,7 +48,7 @@ form {
    accent-color: navy;
 }
 
-#login_container > form > input {
+.form_container > form > input {
    display:block;
    width:25vw;
    margin-bottom: 15px;
@@ -77,11 +75,82 @@ form {
 
 /*ESTILOS ADMIN*/
 
-#logout {
+#btn_logout {
    width:10vw;
    padding:10px;
    font-weight: bold;
    background:yellow;
    border-radius: 5px;
    cursor:pointer;
+}
+
+.admin_container {
+   width:70vw;
+   height: auto;
+}
+
+.admin_container form {
+   width:60vw;
+   display:flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+}
+
+.groupItems {
+   width:25vw;
+   display:flex;
+   flex-flow: column wrap;
+   justify-content: space-evenly;
+}
+.groupItems input {
+   height:5vh;
+   text-align: center;
+   font-size: larger;
+   font-weight: bold;
+}
+#btn_addDoctor {
+   width:50%;
+   background:yellowgreen;
+   font-weight: bold;
+   margin:2vh auto;
+   height: 5vh;
+   border:none;
+   border-radius: 5px;
+   cursor:pointer;
+}
+
+#nav_container{
+   width:100%;
+   display:flex;
+   justify-content: space-evenly;
+}
+
+#nav_container > ul {
+   width: 80vw;
+   display:flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+}
+
+#nav_container > ul > li {
+   width:30vw;
+   text-align: center;
+   list-style: none;
+   color:yellow;
+   background:black;
+   padding:10px;
+   cursor:pointer;
+   border-radius:5px;
+   transition: 1s ease-in-out;
+}
+
+#nav_container > ul > li:hover {
+   border:1px solid silver;
+   filter:drop-shadow(2px 2px 15px white);
+   transition:0.3s ease-in-out;
+}
+
+a { 
+   color:yellow;
+   text-decoration: none;
 }

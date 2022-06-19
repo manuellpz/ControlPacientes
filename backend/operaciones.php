@@ -23,4 +23,20 @@ if(isset($_POST['user'])) {
    echo json_encode($data);
 }
 
+if(isset($_POST['nombres'])) {
+   $nombres = $_POST['nombres'];
+   $apellidos = $_POST['apellidos'];
+   $universidad = $_POST['universidad'];
+   $cedula = $_POST['cedula'];
+   $especialidad = $_POST['especialidad'];
+   $usuario = $_POST['usuario'];
+   $contrasena = $_POST['contrasena'];
+
+   $query = "INSERT INTO usuarios(nombres,apellidos,universidad,cedula,especialidad,usuario,contrasena) VALUES('{$nombres}','{$apellidos}','{$universidad}','{$cedula}','{$especialidad}','{$usuario}','{$contrasena}')";
+
+   mysqli_query($con,$query);
+
+   echo "OK";
+}
+
 ?>

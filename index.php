@@ -12,7 +12,7 @@
       <h1 class="title">INICIAR SESION</h1>
    </header>
    <br>
-   <div id="login_container">
+   <div class="form_container">
       <form>
          <label for="txt_user">Usuario: </label>
          <input type="text" id="txt_user" required>

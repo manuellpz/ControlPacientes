@@ -7,17 +7,13 @@
    <link rel="stylesheet" type="text/css" href="../css/styles.css">
    <title>Administrador</title>
    <script>
-      if(!sessionStorage.getItem('userdata'))
-         window.location.href = '../'
+      if(!sessionStorage.getItem('userdata')) window.location.href = '../'
    </script>
 </head>
 <body>
-   <header>
-      <h1 id="saludo" class="title">Hola, Bienvenido</h1>
-      <button id="logout">Salir</button>
-   </header>
+   <?php include_once('../templates/menu_admin.php'); ?>
 
-
+   
    <script src="../js/admin.js" type="module"></script>
 </body>
 </html>
