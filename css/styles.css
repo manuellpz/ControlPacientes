@@ -107,11 +107,13 @@ form {
    text-align: center;
    font-size: larger;
    font-weight: bold;
+   border-radius: 5px;
 }
-#btn_addDoctor {
+#btn_addDoctor, #btn_generarReceta {
    width:50%;
    background:yellowgreen;
    font-weight: bold;
+   font-size: 20px;
    margin:2vh auto;
    height: 5vh;
    border:none;

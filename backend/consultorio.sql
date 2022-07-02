@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-05-2022 a las 02:14:02
+-- Tiempo de generación: 02-07-2022 a las 02:11:04
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -21,6 +21,34 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `consultorio`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `recetas`
+--
+
+CREATE TABLE `recetas` (
+  `id` int(11) NOT NULL,
+  `folio` int(11) NOT NULL,
+  `fecha` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
+  `nombrePaciente` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
+  `edadPaciente` int(3) NOT NULL,
+  `pesoPaciente` varchar(15) COLLATE latin1_spanish_ci NOT NULL,
+  `tallaPaciente` varchar(15) COLLATE latin1_spanish_ci NOT NULL,
+  `presionPaciente` varchar(15) COLLATE latin1_spanish_ci NOT NULL,
+  `alergiasPaciente` varchar(255) COLLATE latin1_spanish_ci NOT NULL DEFAULT 'NINGUNA',
+  `diagnosticoPaciente` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
+  `receta` text COLLATE latin1_spanish_ci NOT NULL,
+  `medico` varchar(255) COLLATE latin1_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `recetas`
+--
+
+INSERT INTO `recetas` (`id`, `folio`, `fecha`, `nombrePaciente`, `edadPaciente`, `pesoPaciente`, `tallaPaciente`, `presionPaciente`, `alergiasPaciente`, `diagnosticoPaciente`, `receta`, `medico`) VALUES
+(1, 0, '1/7/2022 5:33:38 PM', 'Juan Soto', 42, '75', '1.65', '120/80', 'NINGUNA', 'Resfriado Comun', 'Clorfenamina Compuesta - 1 tableta / 8 horas / 10 dias', 'Manuel Lopez');
 
 -- --------------------------------------------------------
 
@@ -45,11 +73,18 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombres`, `apellidos`, `universidad`, `cedula`, `especialidad`, `posicion`, `usuario`, `contrasena`) VALUES
-(1, 'Alberto', 'Soto', 'UAG - Universidad Autonoma de Guadalajara', '15934635', 'Medico Cirujano', 'Admin', 'albertst', 'albert2022');
+(1, 'Alberto', 'Soto', 'UAG - Universidad Autonoma de Guadalajara', '15934635', 'Medico Cirujano', 'Admin', 'albertst', 'albert2022'),
+(2, 'Manuel', 'Lopez', 'UAS', '00156865', 'Medico Cirujano', 'Medico', 'Manuellpz', 'manuellpz2022');
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `recetas`
+--
+ALTER TABLE `recetas`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -62,10 +97,16 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `recetas`
+--
+ALTER TABLE `recetas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

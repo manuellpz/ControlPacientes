@@ -17,6 +17,7 @@ if(isset($_POST['user'])) {
       "id" => $row['id'],
       "nombres" => $row['nombres'],
       "apellidos" => $row['apellidos'],
+      "posicion" => $row['posicion'],
       "status" => 'OK'
    );
 
@@ -37,6 +38,21 @@ if(isset($_POST['nombres'])) {
    mysqli_query($con,$query);
 
    echo "OK";
+}
+
+if(isset($_GET['getFolio'])) {
+
+   $query = "SELECT max(folio) as fol FROM recetas";
+   $result = mysqli_query($con,$query);
+
+   if(mysqli_num_rows($result) == 0) {
+      echo "No hay recetas";
+   }else {
+      $folio = mysqli_fetch_array($result);
+      echo $folio["fol"];
+   }
+
+   
 }
 
 ?>

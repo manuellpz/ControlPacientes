@@ -18,7 +18,7 @@ addEventListener('submit',e => {
    .then(res => {
       if(res[0].status === 'OK'){
          window.sessionStorage.setItem('userdata',JSON.stringify(res))
-         window.location.href = './backend/admin.php'
+         window.location.href = (res[0].posicion == 'Admin') ? './backend/admin.php' : './backend/medico.php'
       }
    })
    .catch(error => {

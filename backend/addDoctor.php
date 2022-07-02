@@ -41,7 +41,7 @@
       </form>
       
    </div>
-
+   <script src="../js/admin.js" type="module"></script>
    <script src="../js/newDoctor.js" type="module"></script>
 </body>
 </html>
