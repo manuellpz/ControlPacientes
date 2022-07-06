@@ -66,11 +66,12 @@ if(isset($_POST['nuevaReceta'])){
    $receta = $_POST['receta'];
    $medico = $_POST['medico'];
 
-   $query = "INSERT INTO recetas(folio,fecha,nombrePaciente,edadPaciente,pesoPaciente,tallaPaciente,presionPaciente,alergiasPaciente,diagnosticoPaciente,receta,medico) VALUES($folio,'{$fecha}','{$nombre}',{$edad},$peso,'{$talla}','{$presion}','{$alergias}','{$diagnostico}','{$receta}','{$medico}')";
+   $query = "INSERT INTO recetas(folio,fecha,nombrePaciente,edadPaciente,pesoPaciente,tallaPaciente,presionPaciente,alergiasPaciente,diagnosticoPaciente,receta,medico) VALUES({$folio},'{$fecha}','{$nombre}',{$edad},'{$peso}','{$talla}','{$presion}','{$alergias}','{$diagnostico}','{$receta}','{$medico}')";
 
-   mysqli_query($con,$query);
-
-   echo "OK";
+   if(mysqli_query($con,$query))
+      echo "OK";
+   else
+      echo "Algo Salio Mal";
 }
 
 ?>
