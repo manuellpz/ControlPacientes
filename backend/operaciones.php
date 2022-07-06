@@ -51,8 +51,26 @@ if(isset($_GET['getFolio'])) {
       $folio = mysqli_fetch_array($result);
       echo $folio["fol"];
    }
+}
 
-   
+if(isset($_POST['nuevaReceta'])){
+   $folio = $_POST['folio'];
+   $fecha = $_POST['fecha'];
+   $nombre = $_POST['nombre'];
+   $edad = $_POST['edad'];
+   $peso = $_POST['peso'];
+   $talla = $_POST['talla'];
+   $presion = $_POST['presion'];
+   $alergias = $_POST['alergias'];
+   $diagnostico = $_POST['diagnostico'];
+   $receta = $_POST['receta'];
+   $medico = $_POST['medico'];
+
+   $query = "INSERT INTO recetas(folio,fecha,nombrePaciente,edadPaciente,pesoPaciente,tallaPaciente,presionPaciente,alergiasPaciente,diagnosticoPaciente,receta,medico) VALUES($folio,'{$fecha}','{$nombre}',{$edad},$peso,'{$talla}','{$presion}','{$alergias}','{$diagnostico}','{$receta}','{$medico}')";
+
+   mysqli_query($con,$query);
+
+   echo "OK";
 }
 
 ?>

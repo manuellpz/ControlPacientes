@@ -14,7 +14,7 @@
       <h1>RECETA</h1> <br>
       <form>
          <div class="groupItems">
-            <input type="hidden" id="txt_folio" readonly>
+            <input type="text" id="txt_folio" readonly>
 
             <label for="txt_nombre">Nombre</label>
             <input type="text" id="txt_nombre"><br>
