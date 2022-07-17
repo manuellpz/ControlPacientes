@@ -18,17 +18,7 @@ body {
    font-size: 50px;
 }
 
-.error {
-   width:40vw;
-   display: none;
-   margin:auto;
-   text-align: center;
-   background:tomato;
-   color:white;
-   text-shadow: 1px 1px 1px black;
-   padding:10px;
-   border-radius:5px;
-}
+.hidden { display:none; }
 
 .form_container {
    background:white;

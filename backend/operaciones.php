@@ -74,4 +74,24 @@ if(isset($_POST['nuevaReceta'])){
       echo "Algo Salio Mal";
 }
 
+if(isset($_GET['consulta'])) {
+   $valor = $_GET['consulta'];
+
+   $query = "SELECT nombres,apellidos,universidad,cedula,especialidad FROM usuarios WHERE nombres LIKE '{$valor}%'";
+   $result = mysqli_query($con,$query);
+
+   $datos = array();
+
+   while($row = mysqli_fetch_array($result)) {
+      $datos[] = array(
+         'nombres' => $row['nombres'],
+         'apellidos' => $row['apellidos'],
+         'universidad' => $row['universidad'],
+         'cedula' => $row['cedula'],
+         'especialidad' => $row['especialidad']
+      );
+   }
+   echo json_encode($datos);
+}
+
 ?>

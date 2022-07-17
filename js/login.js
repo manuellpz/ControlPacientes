@@ -1,4 +1,4 @@
-import { select,setStyles } from "./utils.js"
+import { select,setStyles,setAlert } from "./utils.js"
 const btnIngresar = document.querySelector('#btn_ingresar')
 
 addEventListener('submit',e => {
@@ -22,10 +22,11 @@ addEventListener('submit',e => {
       }
    })
    .catch(error => {
-      const element = select('.error')
-      setStyles(element,{display:'block'})
-      setTimeout(()=>{
-         setStyles(element,{display:"none"})
-      },3000)
+      // const element = select('.error')
+      // setStyles(element,{display:'block'})
+      // setTimeout(()=>{
+      //    setStyles(element,{display:"none"})
+      // },3000)
+      setAlert('Error','Usuario y/o Contraseña Incorrectos','info','red')
    })
 })

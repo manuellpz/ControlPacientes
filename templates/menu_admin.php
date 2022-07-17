@@ -4,7 +4,7 @@
 <nav id="nav_container">
    <ul id="nav_items">
       <li><a href="../backend/addDoctor.php">Agregar Medico</a></li>
-      <li><a href="#">Consultar Medico</a></li>
+      <li><a href="../backend/consultarMedico.php">Consultar Medico</a></li>
    </ul>
    <button id="btn_logout">Cerrar Sesion</button>
 </nav>

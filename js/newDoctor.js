@@ -1,4 +1,4 @@
-import {select} from '../js/utils.js'
+import {select,setAlert} from '../js/utils.js'
 
 addEventListener('submit',e => {
    e.preventDefault()
@@ -24,5 +24,8 @@ addEventListener('submit',e => {
       body:data
    })
    .then(response => response.text())
-   .then(respuesta => console.log(respuesta))
+   .then(respuesta => {
+      if(respuesta === 'OK')
+         setAlert('Nuevo Doctor','Se Ha Agregado Con Exito','success','green')
+   })
 })
